@@ -1,0 +1,156 @@
+ERROR 2022-07-03 19:16:18,434 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:16:18,442 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:16:31,244 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:16:31,244 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:16:58,047 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:16:58,055 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:08,961 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:08,961 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:09,514 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:09,514 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:09,944 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:09,944 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:10,216 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:10,216 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:10,448 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:10,448 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:10,697 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:10,697 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:10,937 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:10,937 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:11,169 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:11,169 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:11,401 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:11,409 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 19:17:11,649 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    print("count: "+i)
+TypeError: can only concatenate str (not "int") to str
+ERROR 2022-07-03 19:17:11,649 basehttp "POST /upload HTTP/1.1" 500 78431

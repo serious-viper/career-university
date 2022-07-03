@@ -25,10 +25,12 @@ class IndexView(TemplateView):
             wb = openpyxl.load_workbook(file, read_only=True).active
             fields = [i.name for i in model._meta.fields]
             fields.remove("id")
+            obj_list = []
             for row in wb.iter_rows(min_row=2):
                 values = [i.value for i in row]
                 nary = dict(zip(fields,values))
-                model.objects.get_or_create(**nary)
+                obj_list.append(model(**nary))
+            model.objects.bulk_create(obj_list)
             return JsonResponse({
                 "row_length": model.objects.count()
             })
