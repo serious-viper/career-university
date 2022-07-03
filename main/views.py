@@ -37,9 +37,6 @@ class IndexView(TemplateView):
         return render(request, "upload.html")
 
 class CutoffAnalyserView(object):
-    def __init__(self) -> None:
-        pass
-
     def main(self, request):
         context = {
             "course_categorys":Cutoff.objects.all().values_list("category", flat=True).distinct()
@@ -51,7 +48,6 @@ class CutoffAnalyserView(object):
         category_name  = request.POST.get("course_category_name")
         courses = Cutoff.objects.filter(category = category_name).distinct().values_list("course", flat=True).order_by("-course")
         return JsonResponse({'courses':list(courses)})
-
 
     @csrf_exempt
     def get_data(self, request):
@@ -71,7 +67,6 @@ class CutoffAnalyserView(object):
 
 
 class CollegeCutoffView(object):
-
     def main(self, request):
         context = {
             "course_categorys":Cutoff.objects.all().values_list("category", flat=True).distinct()

@@ -133,7 +133,7 @@ function get_seat_matrix(course_name, college_name, reservation_category) {
                         <li class="list-group-item">Reserved for ${seat_matrix_data["reservation_category"]}: <b>${seat_matrix_data["reserved_seats"]}</b></li>
                     </ul>
                     <div class="card-footer text-muted">
-                        To Know available Seats, Fees Structure & admission assistance kindly Call or Whatsapp to +919137386752
+                        To Know available management seats, Fees Structure & admission assistance kindly Call or Whatsapp to +919137386752
                     </div>
                 </div>
                     `

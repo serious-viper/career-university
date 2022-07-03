@@ -154,3 +154,21 @@ Traceback (most recent call last):
     print("count: "+i)
 TypeError: can only concatenate str (not "int") to str
 ERROR 2022-07-03 19:17:11,649 basehttp "POST /upload HTTP/1.1" 500 78431
+ERROR 2022-07-03 20:01:28,678 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:01:28,678 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:02:02,332 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:02:02,343 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:02:02,359 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:02:02,359 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:02:02,359 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-03 20:02:02,359 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+WARNING 2022-07-03 20:02:39,976 log Not Found: /favicon.ico
+WARNING 2022-07-03 20:02:39,976 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
