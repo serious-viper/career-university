@@ -87,8 +87,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
-STATIC_URL = 'images/'
-STATIC_ROOT = '/home/iapshoyw/public_html/images'
+STATIC_URL = 'static/'
+STATIC_ROOT = '/home/iapshoyw/collegeseatfinder.com/static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from local_settings import *
