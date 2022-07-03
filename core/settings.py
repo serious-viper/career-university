@@ -87,8 +87,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
-STATIC_URL = 'static/college'
-STATIC_ROOT = '/home/iapshoyw/static/college'
+STATIC_URL = 'static/college/'
+STATIC_ROOT = '/home/iapshoyw/static/college/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from local_settings import *
