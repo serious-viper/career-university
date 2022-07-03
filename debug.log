@@ -172,3 +172,9 @@ ERROR 2022-07-03 20:02:02,359 basehttp You're accessing the development server o
 
 WARNING 2022-07-03 20:02:39,976 log Not Found: /favicon.ico
 WARNING 2022-07-03 20:02:39,976 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
+WARNING 2022-07-03 22:11:16,221 log Not Found: /favicon.ico
+WARNING 2022-07-03 22:11:16,221 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
+WARNING 2022-07-03 22:11:16,237 log Not Found: /favicon.ico
+WARNING 2022-07-03 22:11:16,237 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
+WARNING 2022-07-03 22:13:48,111 log Not Found: /favicon.ico
+WARNING 2022-07-03 22:13:48,111 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
