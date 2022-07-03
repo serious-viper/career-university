@@ -5,3 +5,4 @@ excel/
 ngrok.exe
 core/secrets.py
 local_settings.py
+staticfiles/

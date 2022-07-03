@@ -10,6 +10,30 @@ from main.models import Cutoff, SeatMatrix
 class IndexView(TemplateView):
     template_name = "index.html"
 
+    @csrf_exempt
+    def upload(self, request):
+        if request.method == "POST":
+            file_type = request.POST.get("file_type")
+            if file_type == "kcet-data":
+                model = Cutoff
+            elif file_type == "seat-data":
+                model = SeatMatrix
+            else:
+                return JsonResponse({"error":"DATA IS CORRUPTED"})
+            model.objects.all().delete()
+            file = request.FILES.get("upload_file")
+            wb = openpyxl.load_workbook(file, read_only=True).active
+            fields = [i.name for i in model._meta.fields]
+            fields.remove("id")
+            for row in wb.iter_rows(min_row=2):
+                values = [i.value for i in row]
+                nary = dict(zip(fields,values))
+                model.objects.get_or_create(**nary)
+            return JsonResponse({
+                "row_length": model.objects.count()
+            })
+        return render(request, "upload.html")
+
 class CutoffAnalyserView(object):
     def __init__(self) -> None:
         pass
@@ -42,18 +66,7 @@ class CutoffAnalyserView(object):
         return JsonResponse({"data":list(data.order_by(reservation).reverse())})
 
 
-    def upload(self, request):
-        if request.method == "POST":
-            Cutoff.objects.all().delete()
-            file = request.FILES.get("upload_file")
-            wb = openpyxl.load_workbook(file).active
-            fields = [i.name for i in Cutoff._meta.fields]
-            fields.remove("id")
-            for row in wb.iter_rows(min_row=2):
-                values = [i.value for i in row]
-                nary = dict(zip(fields,values))
-                Cutoff.objects.get_or_create(**nary)
-        return render(request, "cutoff-upload.html")
+
 
 class CollegeCutoffView(object):
 
@@ -76,9 +89,7 @@ class CollegeCutoffView(object):
     
     @csrf_exempt
     def get_data(self, request):
-        
         college_code = request.POST.get("college_code")
-
         round = request.POST.get("round")
         reservation_category = request.POST.get("category")
         filter_data = {"code":college_code, "round":round}
@@ -90,32 +101,17 @@ class CollegeCutoffView(object):
             "course_cutoff" : list(college_objs.values_list("course", reservation_category))
         })
 
-    
-   
-
-
-
-
-
-
-
 class SeatAnalyserView(object):
-
-    def __init__(self) -> None:
-        pass
-
     def main(self, request):    
         context = dict()
         context["category"] = SeatMatrix.objects.all().values("course_type").distinct().order_by("course_type") 
         return render(request, "seat-finder.html", context)
-
 
     @csrf_exempt
     def get_courses(self, request):
         category_name  = request.POST.get("category_name")
         courses = SeatMatrix.objects.filter(course_type = category_name).distinct().values_list("course_code", flat=True).order_by("-course_code")
         return JsonResponse({'courses':list(courses)})
-
 
     @csrf_exempt
     def get_districts(self, request):
@@ -128,7 +124,6 @@ class SeatAnalyserView(object):
             filter_dict["course_type"] = category_name
         districts = SeatMatrix.objects.filter( **filter_dict).distinct().values_list("district", flat=True).order_by("district")
         return JsonResponse({'districts':list(districts)})
-
 
     @csrf_exempt
     def get_colleges(self, request):
@@ -145,17 +140,13 @@ class SeatAnalyserView(object):
         college_names = SeatMatrix.objects.filter(**filter_dict).distinct().values_list("college_full_name", flat=True).order_by("college_full_name")
         return JsonResponse({'colleges':list(college_names)})
 
-
     @csrf_exempt
     def get_seat_matrix(self, request):
         college_name = request.POST.get("college_name")
         course_name = request.POST.get("course_name")
         reservation_category = request.POST.get("reservation_category")
         reserved_seats_obj  = SeatMatrix.objects.filter(college_full_name = college_name, course_code = course_name)
-        
         reserved_seats = reserved_seats_obj.values_list(reservation_category)[0][0]
-       
-
         seat_matrix_data = dict()
         seat_matrix_data["college_name"] = college_name
         seat_matrix_data["course_name"] = course_name
@@ -168,16 +159,3 @@ class SeatAnalyserView(object):
         })
 
 
-
-    def upload(self, request):
-        if request.method == "POST":
-            SeatMatrix.objects.all().delete()
-            file = request.FILES.get("upload_file")
-            wb = openpyxl.load_workbook(file)["Sheet1"]
-            fields = [i.name for i in SeatMatrix._meta.fields]
-            fields.remove("id")
-            for row in wb.iter_rows(min_row=2):
-                values = [i.value for i in row]
-                nary = dict(zip(fields,values))
-                SeatMatrix.objects.get_or_create(**nary)
-        return render(request, "seat-upload.html")

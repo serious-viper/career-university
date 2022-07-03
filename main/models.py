@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Cutoff(models.Model):
     round = models.CharField(max_length=1000, null=True, blank=True)
     category = models.CharField(max_length=100, null = True, blank = True)
@@ -149,7 +148,7 @@ class SeatMatrix(models.Model):
         return super(SeatMatrix, self).save(*args, **kwargs)
 
     def __str__(self) -> str:
-        return self.college_full_name+" - "+ self.course_code 
+        return "{} - {}".format(self.college_full_name, self.course_code)
 
 
 

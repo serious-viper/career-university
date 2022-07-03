@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="card my-3 p-2">
+        <div class="alert alert-success" role="alert"></div>
+        <h2 class="card-title">Data Upload Form:</h2>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="id_type" class="form-label">Select File Type:</label>
+                <select class="form-control" id="id_type">
+                    <option value="kcet-data">KCET Cutoff Data</option>
+                    <option value="seat-data">Seat Finder Data</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="id_file" class="form-label">Upload Excel Sheet:</label>
+                <input type="file" class="form-control" id="id_file">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="upload_data()">Submit</button>
+        </div>
+    </div>
+    <div class="loader"></div>
+    <style>.alert{display: none;}</style>
+    <script src="{% static 'js/upload.js' %}"></script>
+{% endblock content %}
