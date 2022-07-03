@@ -6,3 +6,4 @@ ngrok.exe
 core/secrets.py
 local_settings.py
 staticfiles/
+debug.log
