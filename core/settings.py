@@ -2,7 +2,6 @@ from pathlib import Path
 from core.secrets import *
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = secret_key
-SECURE_SSL_REDIRECT = True
 DEBUG = False
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','collegeseatfinder.com']
 INSTALLED_APPS = [
