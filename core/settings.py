@@ -102,16 +102,16 @@ LOGGING = {
     },
     'handlers': {
         'file': {
-            'level': 'ERROR',
+            'level': 'WARNING',
             'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'debug.txt',
+            'filename': BASE_DIR / 'debug.log',
             'formatter':"simple"
         },
     },
     'loggers': {
         'django': {
             'handlers': ['file'],
-            'level': 'ERROR',
+            'level': 'WARNING',
             'propagate': True,
         },
     },
@@ -159,5 +159,6 @@ STATIC_ROOT = '/home/iapshoyw/public_html/static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from local_settings import *
+
 except:
     pass
