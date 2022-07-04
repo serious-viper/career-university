@@ -88,7 +88,7 @@ TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static/'
+STATIC_ROOT = '/home/iapshoyw/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from local_settings import *
