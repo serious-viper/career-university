@@ -4,7 +4,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = secret_key
 DEBUG = True
 ALLOWED_HOSTS = ['*']
-SECURE_SSL_REDIRECT = True
 INSTALLED_APPS = [
     'main',
     'django.contrib.admin',
