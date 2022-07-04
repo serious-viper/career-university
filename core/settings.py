@@ -2,8 +2,8 @@ from pathlib import Path
 from core.secrets import *
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = secret_key
-DEBUG = False
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','collegeseatfinder.com']
+DEBUG = True
+ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'main',
     'django.contrib.admin',
