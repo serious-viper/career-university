@@ -123,7 +123,7 @@ function get_seat_matrix(course_name, college_name, reservation_category) {
                 var seat_matrix_data = data["seat_matrix_data"];
                 $("#id_seat_matrix_table").empty();
                 $("#id_seat_matrix_table").prepend(
-                    `<div class="card">
+                    `<div class="card shadow">
                     <div class="card-body">
                         <h2 class="card-title">${seat_matrix_data["college_name"]}</h2>
                         <h3 class="card-text">${seat_matrix_data["course_name"]}</h3>
@@ -138,6 +138,7 @@ function get_seat_matrix(course_name, college_name, reservation_category) {
                 </div>
                     `
                 )
+                document.getElementById("scroll_to_me").scrollIntoView();
             }
         )
     }
