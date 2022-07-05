@@ -106,7 +106,7 @@ function get_colleges(category_name, course_name, district_name) {
 
 
 function get_seat_matrix(course_name, college_name, reservation_category) {
-    
+
     if (reservation_category === undefined) {
 
     } else {
@@ -138,7 +138,9 @@ function get_seat_matrix(course_name, college_name, reservation_category) {
                 </div>
                     `
                 )
-                document.getElementById("scroll_to_me").scrollIntoView();
+                $('html, body').animate({
+                    scrollTop: $("#scroll_to_me").offset().top - $("nav").height() // minus the nav height
+                }, "slow");
             }
         )
     }

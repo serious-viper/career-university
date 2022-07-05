@@ -35,17 +35,21 @@ function get_data() {
                 $(".loader").css("display", "none");
                 var colleges = data["course_cutoff"];
                 $("#college_cutoff_table").css("display", "block");
-    
+
                 $("#course_cutoff").empty();
                 $("#college_name").empty();
                 $("#college_name").prepend(data["college_name"]);
-    
+
                 colleges.forEach(ele => {
                     $("#course_cutoff").prepend(`<tr><td>${ele[0]}</td><td>${ele[1]}</td></tr>`);
                 });
+                $('html, body').animate({
+                    scrollTop: $("#scroll_to_me").offset().top - $("nav").height() // minus the nav height
+                }, "slow");
+
             }
-        )    
-    }
+        )
+}
     
 }
 

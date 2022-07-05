@@ -68,7 +68,7 @@ College Cutoff Rank Analyser
             </div>
             
         </div>
-        <div class="col-md-6">
+        <div id="scroll_to_me" class="col-md-6">
             <div class="card shadow" id="college_cutoff_table" style="display: none;">
                 <div class="card-body">
                     <h4 class="card-title" id="college_name"></h4>
@@ -148,7 +148,7 @@ College Cutoff Rank Analyser
 
             <p>
                 Kindly use this platform to make sound decision on your future and share with others.
-                We tried our best to give you an accurate information in every possible. We regret if there are any
+                We tried our best to give you an accurate information in every possible way. We regret if there are any
                 mistakes or a discrepancy in in the information provided. If you find any please report us
                 immediately at +919137386752.
             </p>
@@ -159,5 +159,7 @@ College Cutoff Rank Analyser
     </div>
 </div>
 <div class="loader"></div>
+<i id="id_scroll_up"></i>
+<script src="{% static 'js/scrollup.js' %}"></script>
 <script src="{% static 'js/cutoff-college.js' %}"></script>
 {% endblock content %}

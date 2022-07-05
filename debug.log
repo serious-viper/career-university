@@ -178,3 +178,330 @@ WARNING 2022-07-03 22:11:16,237 log Not Found: /favicon.ico
 WARNING 2022-07-03 22:11:16,237 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
 WARNING 2022-07-03 22:13:48,111 log Not Found: /favicon.ico
 WARNING 2022-07-03 22:13:48,111 basehttp "GET /favicon.ico HTTP/1.1" 404 4573
+ERROR 2022-07-04 23:31:56,457 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-04 23:31:56,473 basehttp "POST /upload HTTP/1.1" 500 184582
+ERROR 2022-07-04 23:32:27,348 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-04 23:32:27,348 basehttp "POST /upload HTTP/1.1" 500 184582
+ERROR 2022-07-04 23:32:30,631 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-04 23:32:30,639 basehttp "POST /upload HTTP/1.1" 500 184582
+ERROR 2022-07-04 23:34:11,935 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-04 23:34:11,935 basehttp "POST /upload HTTP/1.1" 500 184582
+ERROR 2022-07-05 19:49:35,233 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-05 19:49:35,250 basehttp "POST /upload HTTP/1.1" 500 184582
+ERROR 2022-07-05 19:50:36,819 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-05 19:50:36,821 basehttp "POST /upload HTTP/1.1" 500 184349
+ERROR 2022-07-05 19:51:45,246 log Internal Server Error: /upload
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '=SUM(H2:AF2)'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\main\views.py", line 33, in upload
+    model.objects.bulk_create(obj_list)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 579, in bulk_create
+    returned_columns = self._batched_insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1458, in _batched_insert
+    self._insert(
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1620, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1547, in as_sql
+    value_rows = [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1548, in <listcomp>
+    [
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1549, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1487, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 905, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\bhara\Desktop\career-university\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'total_gen' expected a number but got '=SUM(H2:AF2)'.
+ERROR 2022-07-05 19:51:45,261 basehttp "POST /upload HTTP/1.1" 500 184350
+WARNING 2022-07-05 20:11:07,427 log Not Found: /favicon.ico
+WARNING 2022-07-05 20:11:07,428 basehttp "GET /favicon.ico HTTP/1.1" 404 4700
+ERROR 2022-07-05 20:11:42,936 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:42,940 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:42,984 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:42,988 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:42,989 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:42,991 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:45,406 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:45,409 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:45,421 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:45,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:45,422 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+
+ERROR 2022-07-05 20:11:45,423 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+

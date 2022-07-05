@@ -20,6 +20,7 @@ function upload_data() {
         },
         error: function (jqXHR, status, error) {
             $(".loader").css("display", "none");
-        }
+            $(".alert").css("display", "block");
+            $(".alert").html("ERROR");        }
     });
 }

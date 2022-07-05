@@ -58,7 +58,10 @@ function get_cutoff_table() {
                         </div>`
                     )
                 })
-                document.getElementById("scroll_focus").scrollIntoView();
+                
+                $('html, body').animate({
+                    scrollTop: $("#scroll_focus").offset().top - $("nav").height() // minus the nav height
+                  },"slow");
             }
 
         )
