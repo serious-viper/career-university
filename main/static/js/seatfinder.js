@@ -139,7 +139,7 @@ function get_seat_matrix(course_name, college_name, reservation_category) {
                     `
                 )
                 $('html, body').animate({
-                    scrollTop: $("#scroll_to_me").offset().top - $("nav").height() // minus the nav height
+                    scrollTop: $("#scroll_to_me").offset().top - $("nav").height()-10 // minus the nav height
                 }, "slow");
             }
         )
