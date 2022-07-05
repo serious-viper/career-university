@@ -60,7 +60,7 @@ function get_cutoff_table() {
                 })
                 
                 $('html, body').animate({
-                    scrollTop: $("#scroll_focus").offset().top - $("nav").height() // minus the nav height
+                    scrollTop: $("#scroll_focus").offset().top - $("nav").height() - 20// minus the nav height
                   },"slow");
             }
 

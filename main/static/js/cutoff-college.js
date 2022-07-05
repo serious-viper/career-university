@@ -44,7 +44,7 @@ function get_data() {
                     $("#course_cutoff").prepend(`<tr><td>${ele[0]}</td><td>${ele[1]}</td></tr>`);
                 });
                 $('html, body').animate({
-                    scrollTop: $("#scroll_to_me").offset().top - $("nav").height() // minus the nav height
+                    scrollTop: $("#scroll_to_me").offset().top - $("nav").height() - 20 // minus the nav height
                 }, "slow");
 
             }
