@@ -129,7 +129,7 @@ function get_seat_matrix(course_name, college_name, reservation_category) {
                         <h3 class="card-text">${seat_matrix_data["course_name"]}</h3>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Total reserved seats: <b>${seat_matrix_data["total_seats"]}</b></li>
+                        <li class="list-group-item">Total reserved government seats: <b>${seat_matrix_data["total_seats"]}</b></li>
                         <li class="list-group-item">Reserved for ${seat_matrix_data["reservation_category"]}: <b>${seat_matrix_data["reserved_seats"]}</b></li>
                     </ul>
                     <div class="card-body">
